@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    
+    // Input: number of elements
+    scanf("%d", &n);
+    
+    int arr[n];
+    int zero_count = 0, one_count = 0;
+
+    // Input: array elements and count zeros and ones
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+        if (arr[i] == 0) {
+            zero_count++;
+        } else if (arr[i] == 1) {
+            one_count++;
+        }
+    }
+    
+    // Output: Display the counts of 0's and 1's
+    printf("zc = %d\n", zero_count);
+    printf("oc = %d\n", one_count);
+    
+    return 0;
+}
+Sample Input:
+
+10
+0 0 0 0 0 1 1 1 1 1
+Sample Output:
+
+zc = 5
+oc = 5
