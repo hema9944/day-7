@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    
+    // Input: number of elements
+    scanf("%d", &n);
+    
+    int arr[n];
+    int right_sum = 0;
+
+    // Input: array elements
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Traverse the array from right to left to modify it
+    for (int i = n - 1; i >= 0; i--) {
+        int temp = arr[i];
+        arr[i] = right_sum;
+        right_sum += temp;
+    }
+
+    // Output: print the modified array
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
